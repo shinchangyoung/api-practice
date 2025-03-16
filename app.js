@@ -1,5 +1,6 @@
 $(document).ready(function () {
     // 페이지가 로드되면 실행되는 코드
+    
     $("#search").click(function () {
         // 검색 버튼 클릭 시 실행되는 코드
 
