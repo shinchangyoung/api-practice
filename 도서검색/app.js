@@ -27,12 +27,20 @@ $(document).ready(function () {
             if (msg.documents.length > 0) {
                 // 첫 번째 검색 결과 가져오기
                 let firstBook = msg.documents[0];
-
-                // 첫 번째 책 제목을 <strong> 태그로 강조하여 출력
-                $("p").html("<strong>" + firstBook.title + "</strong><br>");
                 
-                // 첫 번째 책의 썸네일 이미지를 추가
-                $("p").append("<img src='" + firstBook.thumbnail + "' alt='책 이미지'/>");
+                // 🔹 bookStatus가 undefined 또는 null이면 "정보 없음"으로 설정
+                let bookStatus = firstBook.status || "정보 없음";
+
+                let bookPrice = firstBook.price;
+
+           // 첫 번째 책 정보를 HTML로 출력
+           $("p").html(`
+            <strong>${firstBook.title}</strong><br>
+            <img src="${firstBook.thumbnail}" alt="책 이미지"/><br>
+            <strong>상태: ${bookStatus}</strong><br>
+            <strong>가격: ${bookPrice} 원</strong>
+        `);
+                
             } else {
                 // 검색 결과가 없을 경우
                 $("p").html("<strong>검색 결과가 없습니다.</strong>");
