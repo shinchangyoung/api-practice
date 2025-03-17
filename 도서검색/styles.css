@@ -1,74 +1,115 @@
-/* styles.css */
-
-
 /* body 스타일 */
 body {
-    font-family: Arial, sans-serif; /* 기본 글꼴 설정 */
-    background-color: #f4f4f9; /* 배경색 설정 */
-    display: flex; /* Flexbox 사용 */
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
-    height: 100vh; /* 화면 전체 높이 사용 */
-    margin: 0; /* 기본 마진 제거 */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* 화면 넘침 방지 */
 }
 
 /* .container 스타일 */
 .container {
-    text-align: center; /* 텍스트 중앙 정렬 */
-    background-color: #ffffff; /* 배경색 하얀색 */
-    padding: 30px; /* 패딩 추가 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-    border-radius: 8px; /* 둥근 모서리 */
-    width: 100%; /* 너비 100% */
-    max-width: 600px; /* 최대 너비 600px */
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    overflow-y: auto; /* 세로 스크롤이 필요할 경우 생기도록 설정 */
+    max-height: 90vh; /* 화면 높이의 90%로 제한 */
 }
 
 /* h1 스타일 */
 h1 {
-    color: #333; /* 글자 색 어두운 회색 */
-    margin-bottom: 20px; /* 하단 여백 */
+    color: #333;
+    margin-bottom: 20px;
 }
 
 /* .input-container 스타일 */
 .input-container {
-    margin-bottom: 20px; /* 하단 여백 */
+    margin-bottom: 20px;
 }
 
 /* input 스타일 */
 input {
-    padding: 10px; /* 패딩 */
-    font-size: 16px; /* 글꼴 크기 */
-    width: 300px; /* 고정 너비 */
-    margin-right: 10px; /* 오른쪽 여백 */
-    border: 1px solid #ccc; /* 테두리 색 */
-    border-radius: 4px; /* 둥근 테두리 */
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 /* button 스타일 */
 button {
-    padding: 10px 20px; /* 패딩 */
-    font-size: 16px; /* 글꼴 크기 */
-    background-color: #4CAF50; /* 버튼 배경색 */
-    color: white; /* 버튼 글자색 */
-    border: none; /* 테두리 없음 */
-    border-radius: 4px; /* 둥근 모서리 */
-    cursor: pointer; /* 커서 포인터로 변경 */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /* 버튼 호버 상태 스타일 */
 button:hover {
-    background-color: #45a049; /* 버튼 호버 시 색상 변경 */
+    background-color: #45a049;
 }
 
-/* #result p 스타일 */
-#result p {
-    margin-top: 20px; /* 상단 여백 */
-    font-size: 18px; /* 글꼴 크기 */
+/* 🔹 결과 섹션 스타일 */
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* 세로 스크롤 가능 */
+    max-height: 400px; /* 최대 높이 400px로 설정하여 스크롤이 생기도록 */
 }
 
-/* 이미지 스타일 */
-img {
-    margin-top: 15px; /* 상단 여백 */
-    max-width: 150px; /* 최대 너비 150px */
-    border-radius: 8px; /* 둥근 모서리 */
+/* 🔹 책 제목 스타일 */
+.book-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #dfe6e9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 책 이미지 스타일 */
+.book-image {
+    margin-top: 10px;
+    max-width: 150px;
+    border-radius: 8px;
+    border: 2px solid #3498db; /* 파란색 테두리 */
+    padding: 5px;
+    background-color: #ecf0f1;
+}
+
+/* 🔹 책 가격 스타일 */
+.book-price {
+    font-size: 18px;
+    color: #e74c3c; /* 빨간색 */
+    font-weight: bold;
+    background-color: #fdecea;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* 🔹 책 상태 스타일 */
+.book-status {
+    font-size: 16px;
+    font-weight: bold;
+    color: #27ae60; /* 초록색 */
+    background-color: #e8f5e9;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
 }
