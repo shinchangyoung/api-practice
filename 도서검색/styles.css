@@ -1,115 +1,105 @@
-/* body 스타일 */
+/* 전체 페이지 스타일 */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    background-color: #343a40;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* 검색 창 스타일 */
+.search-box {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden; /* 화면 넘침 방지 */
-}
-
-/* .container 스타일 */
-.container {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 100%;
-    max-width: 600px;
-    overflow-y: auto; /* 세로 스크롤이 필요할 경우 생기도록 설정 */
-    max-height: 90vh; /* 화면 높이의 90%로 제한 */
-}
-
-/* h1 스타일 */
-h1 {
-    color: #333;
     margin-bottom: 20px;
 }
 
-/* .input-container 스타일 */
-.input-container {
-    margin-bottom: 20px;
-}
-
-/* input 스타일 */
-input {
+.search-box input {
     padding: 10px;
     font-size: 16px;
     width: 300px;
-    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-right: 10px;
 }
 
-/* button 스타일 */
-button {
+.search-box button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-/* 버튼 호버 상태 스타일 */
-button:hover {
-    background-color: #45a049;
+.search-box button:hover {
+    background-color: #0056b3;
 }
 
-/* 🔹 결과 섹션 스타일 */
-#result {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
+/* 책 목록 스타일 */
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* 책 카드 스타일 */
+.book-card {
+    background-color: white;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* 세로 스크롤 가능 */
-    max-height: 400px; /* 최대 높이 400px로 설정하여 스크롤이 생기도록 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* 🔹 책 제목 스타일 */
-.book-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2c3e50;
-    background-color: #dfe6e9;
-    padding: 10px;
+.book-card img {
+    max-width: 100%;
+    height: auto;
     border-radius: 4px;
     margin-bottom: 10px;
 }
 
-/* 🔹 책 이미지 스타일 */
-.book-image {
-    margin-top: 10px;
-    max-width: 150px;
-    border-radius: 8px;
-    border: 2px solid #3498db; /* 파란색 테두리 */
-    padding: 5px;
-    background-color: #ecf0f1;
-}
-
-/* 🔹 책 가격 스타일 */
-.book-price {
+.book-title {
     font-size: 18px;
-    color: #e74c3c; /* 빨간색 */
     font-weight: bold;
-    background-color: #fdecea;
-    padding: 8px;
-    border-radius: 4px;
-    margin-top: 10px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-/* 🔹 책 상태 스타일 */
-.book-status {
+.book-price {
     font-size: 16px;
+    color: #e74c3c;
     font-weight: bold;
-    color: #27ae60; /* 초록색 */
-    background-color: #e8f5e9;
-    padding: 8px;
-    border-radius: 4px;
+}
+
+/* 구매 버튼 스타일 */
+.buy-button {
+    display: block;
     margin-top: 10px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.buy-button:hover {
+    background-color: #218838;
 }
