@@ -40,6 +40,9 @@
 // 🔟 API 요청 실패 시 오류 처리
 // API 요청이 실패하면 console.error()를 통해 오류 내용을 출력합니다.
 // 사용자에게 "API 요청 중 오류가 발생했습니다." 라는 경고창을 띄웁니다.
+
+
+
 $(document).ready(function () {
     $("#search").click(function () {
         let bookTitle = $("#bookName").val().trim();
